@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"></head>
+</head>
+<body>
+<nav>
+    <a href="/api/cart">Cart</a> |
+    <a href="/api/orders">Orders</a> |
+    <a href="/api/products/addProduct">Sell</a> |
+    <a href="/api/products">Product List</a>
+</nav>
+<div class="product-form">
+    <h1>Add Product</h1>
+    <form method="POST" action="/api/products">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

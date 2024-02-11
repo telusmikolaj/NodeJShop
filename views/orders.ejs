@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Order List</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"></head>
+</head>
+<body>
+<nav>
+    <a href="/api/cart">Cart</a> |
+    <a href="/api/orders">Orders</a> |
+    <a href="/api/products/addProduct">Sell</a> |
+    <a href="/api/products">Product List</a>
+</nav>
+<h1>Order List</h1>
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Items</th>
+        <th>Total</th>
+    </tr>
+    <% orders.forEach((order) => { %>
+        <tr>
+            <td><%= order._id %></td>
+            <td>
+                <% order.items.forEach((item) => { %>
+                    <p><%= item.product.name %>  x<%= item.quantity %></p>
+                <% }) %>
+            </td>
+            <td><%= order.total %></td>
+        </tr>
+    <% }); %>
+</table>
+</body>
+</html>

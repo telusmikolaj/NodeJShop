@@ -1,0 +1,11 @@
+# Project exclude paths
+/controllers/cartController.js
+/controllers/orderController.js
+/controllers/productController.js
+/models/Cart.js
+/models/Order.js
+/models/Product.js
+/routes/cartRoutes.js
+/routes/orderRoutes.js
+/routes/productRoutes.js
+/app.js
